@@ -15,13 +15,20 @@ A melhor forma de aprender a programar é programando. Então vamos direto ao po
 
 Vamos às considerações importantes sobre o documento anterior. 
 
-#### TAGS
+#### Tags
 
 Pra entender código HTML você precisa primeiro entender o conceito de **TAG**. Pense numa página web como uma conversa com o navegador. 
 
 Toda página HTML começa com a tag **\<html\> ...  \</html\>**. Isso define o início e o fim de uma página web. Pense numa tag como uma instrução que você dá para o navegador. No caso do documento anterior, você está dizendo na linha 1 *"Navegador, minha página web começa aqui. Pode começar a traduzir meu código."* e na linha 13 você está dizendo *"Navegador, minha página terminou. Pode descansar agora".*  
 
-#### Cabeçalho
+Um **elemento HTML** normalmente começa com uma tag e termina com uma tag, e tem um conteúdo inserido entre elas:
+
+```xml
+<tagname>Content goes here...</tagname>
+
+```
+
+#### Cabeçalho \<head>
 
 Durante nossa conversa com o navegador web, precisamos as vezes definir as regras do jogo antes dele começar a mostrar coisas na tela. Essas regras do jogo são definidas no cabeçalho. 
 
@@ -69,3 +76,25 @@ O arquivo __app.js__ contém comandos numa linguagem chamada JavaScript. Provave
 
 Agora é suficiente você saber que nesse arquivo estarão informações sobre como o navegador deve se comportar quando o usuário passar o mouse em alguma imagem na tela, ou quando o usuário clicar em alguma coisa, ou fizer alguma interação com minha página web. 
 
+#### Conteúdo da Página \<body>
+
+Considerando que as regras do jogo com o navegador estão definidas, o que precisamos fazer agora é definir o conteúdo da nossa página. 
+
+Em geral, dentro da tag __*\<body>*__ colocamos outras tags que se traduz em algum elemento visual de tela (um botão, imagem, caixa de texto, etc). 
+
+Veja o código a seguir:
+
+```html
+<body>
+    <h1>Meu Primeiro HTML</h1>
+</body>
+```
+
+Dentro do  __*\<body>*__ temos uma tag  __*\<h1>*__ e dentro dela temos um texto *"Meu Primeiro HTML".*  
+
+Veja o efeito que isso tem na tela: 
+
+![Code 1](img/tag_h1.png)
+
+
+Durante as próximas aulas, iremos estudar mais profundamente esta e outras tags HTML e aprender a utilidade de cada uma delas. 
