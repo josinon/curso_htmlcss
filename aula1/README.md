@@ -11,7 +11,7 @@
 
 A melhor forma de aprender a programar é programando. Então vamos direto ao ponto. O exemplo a seguir apresenta um documento HTML simples. A ideia nessa aula é entender a estrutura desse arquivo pra gente poder fazer páginas maiores e melhores. 
 
-![Code 1](img/code1.svg)
+![Code 1](img/code1.png)
 
 Vamos às considerações importantes sobre o documento anterior. 
 
