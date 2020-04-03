@@ -9,7 +9,7 @@
 
 ### HTML5
 
-```html {.line-numbers}
+```html {.lineNo}
 <!DOCTYPE html>
 <html lang="en">
 <head>
