@@ -69,5 +69,3 @@ O arquivo __app.js__ contém comandos numa linguagem chamada JavaScript. Provave
 
 Agora é suficiente você saber que nesse arquivo estarão informações sobre como o navegador deve se comportar quando o usuário passar o mouse em alguma imagem na tela, ou quando o usuário clicar em alguma coisa, ou fizer alguma interação com minha página web. 
 
-
-
