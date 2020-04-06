@@ -1,100 +1,73 @@
-# Aula 1
+# Conceitos Básicos de Desenvolvimento Web
 
-## Tópicos abordados
+Quando uma pessoa qualquer acessa internet, ela tem contato com 3 conceitos de desenvolvimento web básicos:
 
-- Aspectos básicos do uso de HTML5
-- Criação de um documento HTML
-- Estrutura básica de um documento HTML
+- Navegador ou cliente web
+- Servidor
+- Endereço ou URL
 
+Esses conceitos vem cada vez mais se tornando comuns na sociedade em que vivemos, e talvez se você perguntar pro seu irmão menor "O que é um servidor?", muito provavelmente ele dará uma resposta muito proxíma da correta.  
 
-### HTML5
+Uma coisa que temos que entender, é que em termos básicos, a comunicação na web é uma conversa entre 2 dispositivos, um dispositivo que recebe o nome de cliente e outra que recebe o nome de servidor. 
 
-A melhor forma de aprender a programar é programando. Então vamos direto ao ponto. O exemplo a seguir apresenta um documento HTML simples. A ideia nessa aula é entender a estrutura desse arquivo pra gente poder fazer páginas maiores e melhores. 
+O dispositivo cliente, executa um software que faz solicitações e exibe respostas. 
 
-![Code 1](img/code1.png)
+O dispositivo servidor executa um software que recebe requisições, faz algum processamento ou busca de informações e envia uma resposta para o dispositivo que realizou a solicitação.
 
-Vamos às considerações importantes sobre o documento anterior. 
+![Request Response](img/request_response.png)
 
-#### Tags
-
-Pra entender código HTML você precisa primeiro entender o conceito de **TAG**. Pense numa página web como uma conversa com o navegador. 
-
-Toda página HTML começa com a tag **\<html\> ...  \</html\>**. Isso define o início e o fim de uma página web. Pense numa tag como uma instrução que você dá para o navegador. No caso do documento anterior, você está dizendo na linha 1 *"Navegador, minha página web começa aqui. Pode começar a traduzir meu código."* e na linha 13 você está dizendo *"Navegador, minha página terminou. Pode descansar agora".*  
-
-Um **elemento HTML** normalmente começa com uma tag e termina com uma tag, e tem um conteúdo inserido entre elas:
-
-```xml
-<tagname>Content goes here...</tagname>
-
-```
-
-#### Cabeçalho \<head>
-
-Durante nossa conversa com o navegador web, precisamos as vezes definir as regras do jogo antes dele começar a mostrar coisas na tela. Essas regras do jogo são definidas no cabeçalho. 
-
-O cabeçalho de uma página web é definido pela tag **\<head\> ...  \</head\>**. O que isso diz é  ... *"Navegador, vou te dizer algumas coisas antes de você começar a mostrar coisas na tela do usuário"*.
-
-A primeira informação dita é: 
-
-```html
-   <meta charset="UTF-8">
-```
-
-Isso diz ao navegador que o padrão de caracteres utilizados pra essa página é UTF-8. Não sabe o que isso significa ? Não se preocupe agora. Teremos tempo pra entender isso. Por enquanto é suficiente você saber que isso vai evitar que você tenha problemas na interpretação de caracteres especiais. 
-
-A segunda informação é:
-
-```html
-   <title>Document</title>
-```
-
-Isso diz para o navegador qual o título da página. Esse texto aparece na barra superior do navegador ou no nome da aba onde a página foi aberta. 
-
-![Code 1](img/barra_endereco.png)
-
-A terceira informação é:
-
-```html
-   <link rel="stylesheet" href="style.css">
-```
-
-Com esse comando você vai dizer ao navegador algo do tipo *"O Kit de maquiagem que você vai usar nessa página é  style.css"*. [Brincadeira]  
-Cada vez mais a beleza e facilidade de uso das páginas web ganha importância. Isso é tão verdade que existe uma linguagem específica para estilizar nossas páginas web. Essa linguagem se chama **CSS**.  
-
-Essa linguagem fornece formas de dizermos ao navegador como queremos que nossa página web seja exibida. Mais a frente iremos entrar em mais detalhes sobre essa linguagem. Por enquanto, é suficiente você saber que eu posso especificar arquivos __*.css*__ que serão utilizados para estilizar minha página web. 
+Para que a comunicação entre cliente e servidor ocorra com sucesso, ambos tem que seguir alguma regras de comunicação. Chamamos essas regras de comunicação de **protocolo**. No caso da comunicação web, o protocolo usado é o HTTP. 
 
 
-A quarta coisa que estamos dizendo pro navegador é: 
+## HTTP e Servidores Web
 
-```html
-   <script src="app.js"></script>
-```
+HTTP é um protocolo(padrão) para transferência de hipertexto. Nesse protocolo temos os conceitos de *request* (requisição) e *response*(resposta). O protocolo HTTP funciona tirando proveito de 2 outros protocolos, TCP e IP. 
 
-Nesse comando estamos dizendo ao navegador *"Utilize o arquivo __app.js__. Nele você encontrará informações sobre como minha página deve se comportar quando o usuário interagir com ela."*  
+O protocolo TCP é responsável por garantir que um arquivo enviado de um dispositivo para outro chegue íntegro ao seu destino, ainda que o arquivo esteja dividido em blocos no momento do envio. 
 
-O arquivo __app.js__ contém comandos numa linguagem chamada JavaScript. Provavelmente você já ouvir falar dela. Nesse curso iremos entender como essa linguagem interage com um documento HTML.
+O IP é o protocolo de sustentação que transfere/roteia os blocos(pacotes) de um dispositivo para o outro no seu caminho até o destino. 
 
-Agora é suficiente você saber que nesse arquivo estarão informações sobre como o navegador deve se comportar quando o usuário passar o mouse em alguma imagem na tela, ou quando o usuário clicar em alguma coisa, ou fizer alguma interação com minha página web. 
+Em resumo, o HTTP é um protocolo de rede que tem características específicas para web, mas ele depende do TCP/IP para obter a solicitação e a resposta completas de um lugar para o outro. A estrutura de uma conversa HTTP é uma sequência simples de solicitação/resposta; *um navegador(browser) solicita e um servidor responde*.
 
-#### Conteúdo da Página \<body>
+## Outros protocolos importantes
 
-Considerando que as regras do jogo com o navegador estão definidas, o que precisamos fazer agora é definir o conteúdo da nossa página. 
+A seguir temos uma breve descrição de outros protocolo que provavelmente você terá contato durante sua vida como desenvolvedor web:
 
-Em geral, dentro da tag __*\<body>*__ colocamos outras tags que se traduz em algum elemento visual de tela (um botão, imagem, caixa de texto, etc). 
+- **HTTPS (Hyper Text Transfer Secure — Protocolo de Transferência de Hipertexto Seguro)** -> funciona exatamente como o HTTP, porém, existe uma camada de proteção a mais. Isso significa que os sites que utilizam esse protocolo são de acesso seguro.
 
-Veja o código a seguir:
-
-```html
-<body>
-    <h1>Meu Primeiro HTML</h1>
-</body>
-```
-
-Dentro do  __*\<body>*__ temos uma tag  __*\<h1>*__ e dentro dela temos um texto *"Meu Primeiro HTML".*  
-
-Veja o efeito que isso tem na tela: 
-
-![Code 1](img/tag_h1.png)
+- **FTP** - Protocolo de Transferência de Arquivos, do inglês File Transfer Protocol,  é um protocolo para transferir dados entre dois computadores através de uma rede.
 
 
-Durante as próximas aulas, iremos estudar mais profundamente esta e outras tags HTML e aprender a utilidade de cada uma delas. 
+- **SSH** - também conhecido como Secure Shell, é um protocolo que permite a execução segura de comandos em um servidor remoto, através de uma conexão via rede. 
+
+
+## Páginas Estáticas e Páginas Dinâmicas
+
+Um aplicativo de Web é um conjunto de páginas de Web estáticas e dinâmicas. Uma página da **Web estática** é aquela que não se altera quando um visitante a solicita: o servidor Web envia a página para o navegador da Web solicitante sem modificá-la. Já uma página da **Web dinâmica** é modificada pelo servidor antes de ser enviada para o navegador solicitante. A natureza mutável da página justifica ela ser chamada de dinâmica.
+
+Um bom exemplo de página dinâmica é a timeline do facebook ou do instagram. A cada vez que você acessa essa página, novos dados aparecem na sua tela, embora o endereço que você digite no navegador seja o mesmo. Se o resultado dessa página fosse sempre o mesmo, ela seria considerada uma página estática. 
+
+Nas próximas aulas você fará exercícios que lhe ajudarão a ter maior familiaridade com esses conceitos.
+
+
+## Tecnologias WEB
+
+Quando estamos falando de tecnologias web, em especial tecnologias que executam no lado do cliente, temos que pensar em 3 objetivos específicos: 
+
+- **Marcação**: trata-se da linguagem de marcação _**HTML**_, responsável por definir o que será exibido como conteúdo em uma página e criar as ligações (links) para outros conteúdos;
+
+- **Apresentação**: está associado à tecnologia _**CSS**_, que é uma linguagem de estilo utilizada para definir a aparência de documentos escritos em HTML. Seu principal benefício é prover a separação entre o formato visual e o conteúdo de um documento;
+
+- **Comportamento**: aqui vamos lidar com a linguagem _**JavaScript**_, utilizada para trazer mais dinamismo às páginas web através de recursos como controle de eventos, manipulação de *elementos DOM* e seus conteúdos, entre outras funcionalidades.
+
+Durante nosso curso, trabalharemos com cada um desses objetivos e com suas respectivas tecnologias. 
+
+## Referências
+
+- https://helpx.adobe.com/br/dreamweaver/using/web-applications.html
+
+- https://www.w3schools.com/whatis/whatis_http.asp
+
+- https://www.w3schools.com/whatis/whatis_html.asp
+
+- https://www.w3schools.com/whatis/whatis_css.asp
