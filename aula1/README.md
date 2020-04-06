@@ -14,7 +14,7 @@ O dispositivo cliente, executa um software que faz solicitações e exibe respos
 
 O dispositivo servidor executa um software que recebe requisições, faz algum processamento ou busca de informações e envia uma resposta para o dispositivo que realizou a solicitação.
 
-![Request Response](img/request_response.png)
+![Request Response](img/http_communication.png)
 
 Para que a comunicação entre cliente e servidor ocorra com sucesso, ambos tem que seguir alguma regras de comunicação. Chamamos essas regras de comunicação de **protocolo**. No caso da comunicação web, o protocolo usado é o HTTP. 
 
